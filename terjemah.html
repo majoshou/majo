@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YumeSubs - Translate</title>
+    <link href="majo.css" rel="stylesheet">
+
+
+
+      <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      background: #1c1c1c;
+      padding: 30px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      color: #fff;
+    }
+    .anime-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+    .anime-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #222;
+      cursor: pointer;
+      transition: transform 0.3s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .anime-card:hover {
+      transform: scale(1.05);
+    }
+    .anime-card img {
+       width: 100%;
+      height: 220px;      /* tinggi gambar dikurangi */
+      object-fit: cover;  /* supaya tidak melar */
+      display: block;
+    }
+    .episode-tag {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #e91e63;
+      padding: 3px 6px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+    .day-tag {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #2196f3;
+      padding: 3px 6px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+    .anime-title {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      background: #1c1c1c;
+    }
+  </style>
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="index.html" class="logo-container">
+            <div class="logo">
+                <img src="images/icon.png" width="50" height="50">>
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(-15 17.5 50)" />
+                    <rect x="35" y="15" width="15" height="70" fill="url(#grad1)" />
+                    <rect x="60" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(15 67.5 50)" />
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
+                </svg>
+            </div>
+            <div class="logo-text">YumeSubs</div>
+        </a>
+
+
+        <nav class="main-menu" id="mainMenu">
+            <a href="index.html" class="menu-item active">Home</a>
+            <a href="yume.html" class="menu-item">Komentar</a>
+            <a href="terjemah.html" class="menu-item">Terjemah</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="menu-item external">Youtube</a>
+        </nav>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        
+        
+    </header>
+
+    <!-- Home Section -->
+
+
+  
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>Lagu Yang Udah Di Terjemah</h2>
+                <p>Satu satu ya, ribet soalnya:)</p>
+            </div>
+ 
+
+            
+     <div class="anime-grid">
+    <a href="ring_ding.html" class="anime-card">
+      <img src="images/ringding.jpg" alt="Anime">
+      <div class="episode-tag">EOY</div>
+      <div class="day-tag">2017</div>
+      <div class="anime-title">Ring Ding - Aimyon</div>
+    </a>
+
+    <a href="anime-details.html" class="anime-card">
+      <img src="https://picsum.photos/id/1016/300/400" alt="Anime">
+      <div class="episode-tag">Ep 12</div>
+      <div class="day-tag">Jumat</div>
+      <div class="anime-title">Mizu Zokusei no</div>
+    </a>
+
+    <a href="anime-details.html" class="anime-card">
+      <img src="https://picsum.photos/id/1018/300/400" alt="Anime">
+      <div class="episode-tag">Ep 12</div>
+      <div class="day-tag">Kamis</div>
+      <div class="anime-title">Dr. Stone Season 4</div>
+    </a>
+
+       <a href="anime-details.html" class="anime-card">
+      <img src="https://picsum.photos/id/1015/300/400" alt="Anime">
+      <div class="episode-tag">Ep 12</div>
+      <div class="day-tag">Rabu</div>
+      <div class="anime-title">Kakkou no Iinazuke</div>
+    </a>
+
+    <a href="anime-details.html" class="anime-card">
+      <img src="https://picsum.photos/id/1016/300/400" alt="Anime">
+      <div class="episode-tag">Ep 12</div>
+      <div class="day-tag">Jumat</div>
+      <div class="anime-title">Mizu Zokusei no</div>
+    </a>
+
+    <a href="anime-details.html" class="anime-card">
+      <img src="https://picsum.photos/id/1018/300/400" alt="Anime">
+      <div class="episode-tag">Ep 12</div>
+      <div class="day-tag">Kamis</div>
+      <div class="anime-title">Dr. Stone Season 4</div>
+    </a>
+  </div>
+
+
+
+
+
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <span>↑</span>
+    </div>
+
+<script src="majoshou.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="majo.css" rel="stylesheet">
+
+
+      <style>
+    :root{
+      --bg:#0f1113;
+      --panel:#111315;
+      --text:#e6eef8;
+      --muted:#9aa0a6;
+      --accent:#ff4444; /* warna terjemahan (merah) */
+      --romaji:#f3f4f6;
+      --gap:8px;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family: Inter, system-ui, "Helvetica Neue", Arial;
+      margin:0;
+      padding:24px;
+      line-height:1.45;
+    }
+
+    .card{
+      max-width:920px;
+      margin-inline:auto;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:10px;
+      padding:20px 24px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    h2.section {
+      margin:0 0 12px 0;
+      font-size:20px;
+      color:var(--text);
+      letter-spacing:0.2px;
+    }
+
+    .line{
+      margin-bottom:12px;
+      padding:10px;
+      border-radius:8px;
+    }
+
+    .jp {
+      display:block;
+      color:var(--text);
+      font-weight:700;
+      font-size:16px;
+      margin-bottom:6px;
+    }
+
+    .romaji {
+      display:block;
+      color:var(--romaji);
+      font-size:14px;
+      margin-bottom:6px;
+    }
+
+    /* TERJEMAHAN: warna merah seperti yang diminta */
+    .translation {
+      display:block;
+      color: var(--accent);
+      font-size:15px;
+      font-weight:700;
+      background: rgba(255,68,68,0.04);
+      padding:8px;
+      border-radius:6px;
+    }
+
+    /* penanda bagian */
+    .part {
+      display:inline-block;
+      margin-bottom:12px;
+      padding:6px 10px;
+      background:#0b0c0d;
+      border-radius:6px;
+      color:var(--muted);
+      font-size:13px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    /* spacing kecil */
+    .sp { height:10px; }
+
+    @media (max-width:600px){
+      .card{padding:14px;}
+      .jp{font-size:15px}
+      .romaji{font-size:13px}
+      .translation{font-size:14px}
+    }
+  </style>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="index.html" class="logo-container">
+            <div class="logo">
+                <img src="images/icon.png" width="50" height="50">>
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(-15 17.5 50)" />
+                    <rect x="35" y="15" width="15" height="70" fill="url(#grad1)" />
+                    <rect x="60" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(15 67.5 50)" />
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
+                </svg>
+            </div>
+            <div class="logo-text">YumeSubs</div>
+        </a>
+
+
+        <nav class="main-menu" id="mainMenu">
+            <a href="index.html" class="menu-item active">Home</a>
+            <a href="yume.html" class="menu-item">Komentar</a>
+            <a href="terjemah.html" class="menu-item">Terjemah</a>
+            <a href="https://www.youtube.com/@YumeSubtitle" target="_blank" rel="noopener noreferrer" class="menu-item external">Youtube</a>
+        </nav>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+     <section id="about" class="section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>Ring Ding - Aimyon</h2>
+                
+<h3>"Excitement of Youth" (青春のエキサイトメント)</h3>
+
+  <div class="card">
+    <div class="part">Verse 1</div>
+
+    <div class="line">
+      <span class="jp">ため息は酸素の無駄使いさ</span>
+      <span class="romaji">Tameiki wa sanso no mudazukai sa</span>
+      <span class="translation">Menghela napas itu hanya pemborosan oksigen.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">どうせなら楽しい話をしよう</span>
+      <span class="romaji">Douse nara tanoshii hanashi o shiyou</span>
+      <span class="translation">Daripada itu, ayo kita bicara hal-hal yang menyenangkan.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">いい加減その態度やめてよね</span>
+      <span class="romaji">Iikagen sono taido yamete yo ne</span>
+      <span class="translation">Udah cukup — hentikan sikapmu itu, ya.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">可愛い顔が台無しとか言う訳ないからね</span>
+      <span class="romaji">Kawaii kao ga dainashi toka iu wake nai kara ne</span>
+      <span class="translation">Jangan bilang wajah imutmu jadi rusak, nggak mungkin.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">眠たい時はすぐに寝ちゃうのに</span>
+      <span class="romaji">Nemutai toki wa sugu ni nechau no ni</span>
+      <span class="translation">Padahal kalau ngantuk, kamu langsung tidur.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">泣きたい時はどうして強がるの</span>
+      <span class="romaji">Nakitai toki wa doushite tsuyogaru no</span>
+      <span class="translation">Kenapa saat ingin menangis kamu malah sok kuat?</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">プライドがあるとか言ってたけど</span>
+      <span class="romaji">Puraido ga aru toka itteta kedo</span>
+      <span class="translation">Kamu bilang punya harga diri, kan?</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">一つ言わせて欲しい</span>
+      <span class="romaji">Hitotsu iwasete hoshii</span>
+      <span class="translation">Biar aku bilang satu hal.</span>
+    </div>
+
+    <div class="sp"></div>
+
+    <div class="part">Pre-Chorus 1</div>
+
+    <div class="line">
+      <span class="jp">あのさプライドなんて似合わないし</span>
+      <span class="romaji">Ano sa, puraido nante niawanai shi</span>
+      <span class="translation">Hei, kata "pride" itu nggak cocok buatmu.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">人間らしさ出していこうよ</span>
+      <span class="romaji">Ningen rashisa dashite ikou yo</span>
+      <span class="translation">Tunjukkan saja sisi manusiamu yang apa adanya.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">泣き顔見せたくないとか嘘つき泥棒のはじまり</span>
+      <span class="romaji">Nakigao misetakunai toka usotsuki dorobou no hajimari</span>
+      <span class="translation">Bilang “aku nggak mau nunjukin muka menangis” itu cuma awal dari kebohongan.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">好きな人の前ではわんわん泣くくせに</span>
+      <span class="romaji">Suki na hito no mae de wa wanwan naku kuse ni</span>
+      <span class="translation">Padahal di depan orang yang kamu suka, kamu nangis meraung-raung.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">ぶりっ子かよ</span>
+      <span class="romaji">Burikko ka yo</span>
+      <span class="translation">Burikko banget, ya? (sok imut/berakting manis begitu).</span>
+    </div>
+
+    <div class="sp"></div>
+
+    <div class="part">Chorus 1</div>
+
+    <div class="line">
+      <span class="jp">今日はとりあえず家にいてだらだらしなよ</span>
+      <span class="romaji">Kyou wa toriaezu ie ni ite daradara shina yo</span>
+      <span class="translation">Hari ini, untuk sementara tinggal saja di rumah dan bermalas-malasan.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">バカらしくなって気づけばお腹が減ってるだろう</span>
+      <span class="romaji">Bakarashiku natte kidzukeba onaka ga hetteru darou</span>
+      <span class="translation">Nanti terasa konyol, lalu tanpa sadar kamu bakal lapar, kan?</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">明日晴れても晴れなくてもどこか行こう</span>
+      <span class="romaji">Ashita harete mo harenakute mo dokoka ikou</span>
+      <span class="translation">Besok, entah cerah atau mendung, ayo kita pergi ke suatu tempat.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">指切りげんまん嘘ついたら</span>
+      <span class="romaji">Yubikiri genman uso tsuitara</span>
+      <span class="translation">Janji kelingking—kalau bohong...</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">ぶん殴りに行くからさ</span>
+      <span class="romaji">Bun’naguri ni iku kara sa</span>
+      <span class="translation">Aku bakal datang dan memukulmu.</span>
+    </div>
+
+    <div class="sp"></div>
+
+    <div class="part">Verse 2</div>
+
+    <div class="line">
+      <span class="jp">無理に笑えとは言わないけど</span>
+      <span class="romaji">Muri ni warae to wa iwanai kedo</span>
+      <span class="translation">Aku nggak bilang kamu harus dipaksa tertawa, tapi…</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">一緒にいて正直楽しくない</span>
+      <span class="romaji">Issho ni ite shoujiki tanoshikunai</span>
+      <span class="translation">Bersama kamu, sejujurnya aku nggak merasa senang.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">言いたいこと悩みがあるのなら</span>
+      <span class="romaji">Iitai koto nayami ga aru no nara</span>
+      <span class="translation">Kalau ada yang ingin kamu katakan atau beban di pikiran...</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">なんでも聞いてあげるさ</span>
+      <span class="romaji">Nandemo kiite ageru sa</span>
+      <span class="translation">Aku akan mendengarkan apa pun itu.</span>
+    </div>
+
+    <div class="sp"></div>
+
+    <div class="part">Pre-Chorus 2</div>
+
+    <div class="line">
+      <span class="jp">だから陰口悪口どんとこい</span>
+      <span class="romaji">Dakara kageguchi waruguchi don to koi</span>
+      <span class="translation">Jadi, gosipin aku atau maki aku, ayo saja.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">全部笑いに変えてあげる</span>
+      <span class="romaji">Zenbu warai ni kaete ageru</span>
+      <span class="translation">Akan kubuat semuanya jadi bahan tertawa.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">いちいち根暗になってうずくまってるとかうざい</span>
+      <span class="romaji">Ichiichi nekura ni natte uzukumatteru toka uzai</span>
+      <span class="translation">Sumpah nyebelin kalau tiap hal kecil kamu langsung murung dan meringkuk.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">ほっとけとか言うならまじでほっとくぞ</span>
+      <span class="romaji">Hottoke toka iu nara maji de hottoku zo</span>
+      <span class="translation">Kalau kamu bilang “biarkan saja,” serius aku bakal bener-bener membiarkannya.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">カッコつけんな</span>
+      <span class="romaji">Kakko tsukenna</span>
+      <span class="translation">Jangan sok keren.</span>
+    </div>
+
+    <div class="sp"></div>
+
+    <div class="part">Chorus 2</div>
+
+    <div class="line">
+      <span class="jp">今日はとりあえず家にいて映画でも観なよ</span>
+      <span class="romaji">Kyou wa toriaezu ie ni ite eiga demo mina yo</span>
+      <span class="translation">Hari ini, untuk sementara tinggal saja di rumah dan nonton film.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">アホらしくなって気づけば眠りについてるだろう</span>
+      <span class="romaji">Ahorashiku natte kidzukeba nemuri ni tsuite ru darou</span>
+      <span class="translation">Nanti terasa konyol, lalu tanpa sadar kamu bakal tertidur, kan?</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">明日コロッと機嫌直して出てこいよ</span>
+      <span class="romaji">Ashita korotto kigen naoshite detekoi yo</span>
+      <span class="translation">Besok cepat baikan, lalu keluar lagi, ya.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">指切りげんまん嘘つくまえに</span>
+      <span class="romaji">Yubikiri genman uso tsuku mae ni</span>
+      <span class="translation">Sebelum kamu sempat berbohong...</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">会いに行ってあげる</span>
+      <span class="romaji">Ai ni itte ageru</span>
+      <span class="translation">Aku sudah akan datang menemuimu.</span>
+    </div>
+
+    <div class="sp"></div>
+
+    <div class="part">Bridge</div>
+
+    <div class="line">
+      <span class="jp">いいことを探しにいくよりも</span>
+      <span class="romaji">Ii koto o sagashi ni iku yori mo</span>
+      <span class="translation">Daripada repot-repot mencari hal-hal baik...</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">一緒にいれば割とどうでもよくなるさ</span>
+      <span class="romaji">Issho ni ireba warito dou demo yoku naru sa</span>
+      <span class="translation">Kalau kita bersama, hal itu jadi nggak terlalu penting.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">「時の流れに身を任せ」ってよく言うでしょ</span>
+      <span class="romaji">“Toki no nagare ni mi o makase” tte yoku iu desho</span>
+      <span class="translation">Kamu sering bilang, “serahkan diri pada aliran waktu,” kan?</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">「元気を出せよ」</span>
+      <span class="romaji">“Genki o dase yo”</span>
+      <span class="translation">“Ayo semangat.”</span>
+    </div>
+
+    <div class="sp"></div>
+
+    <div class="part">Chorus 3 (ulang)</div>
+
+    <div class="line">
+      <span class="jp">今日はとりあえず家にいてだらだらしなよ</span>
+      <span class="romaji">Kyou wa toriaezu ie ni ite daradara shina yo</span>
+      <span class="translation">Hari ini, untuk sementara tinggal saja di rumah dan bermalas-malasan.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">バカらしくなって気づけばお腹が減ってるだろう</span>
+      <span class="romaji">Bakarashiku natte kidzukeba onaka ga hetteru darou</span>
+      <span class="translation">Nanti terasa konyol, lalu tanpa sadar kamu bakal lapar, kan?</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">明日晴れても晴れなくてもどこか行こう</span>
+      <span class="romaji">Ashita harete mo harenakute mo dokoka ikou</span>
+      <span class="translation">Besok, entah cerah atau mendung, ayo kita pergi ke suatu tempat.</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">指切りげんまん嘘ついたら</span>
+      <span class="romaji">Yubikiri genman uso tsuitara</span>
+      <span class="translation">Janji kelingking—kalau bohong...</span>
+    </div>
+
+    <div class="line">
+      <span class="jp">ぶん殴りに行くからさ</span>
+      <span class="romaji">Bun’naguri ni iku kara sa</span>
+      <span class="translation">Aku bakal datang dan memukulmu.</span>
+    </div>
+
+  </div>
+
+
+    
+</p>
+              
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+</script>
+    <script src="majoshou.js"></script>
+</body>
+</html>
