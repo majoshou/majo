@@ -1360,56 +1360,6 @@
   }
 }
 
-/* Background utama komentar */
-.hyvor-talk-container,
-.hyvor-talk-comments,
-.hyvor-talk-comment,
-.hyvor-talk-replies {
-  background: #ffffff !important; /* putih bersih */
-  color: #111111 !important;     /* teks hitam */
-  border-radius: 6px;
-}
-
-/* Isi teks komentar */
-.hyvor-talk-comment-body,
-.hyvor-talk-comment-text,
-.hyvor-talk-comment p {
-  color: #222222 !important;
-  line-height: 1.6;
-}
-
-/* Nama user */
-.hyvor-talk-comment-author {
-  color: #1976d2 !important;  /* biru aksen */
-  font-weight: 600;
-}
-
-/* Link di dalam komentar */
-.hyvor-talk-comment a {
-  color: #1565c0 !important;
-  text-decoration: none;
-}
-
-.hyvor-talk-comment a:hover {
-  text-decoration: underline;
-}
-
-/* Tombol (reply, post, dll.) */
-.hyvor-talk-button {
-  background: #1976d2 !important; /* biru */
-  color: #fff !important;
-  border-radius: 4px;
-  padding: 6px 12px;
-  transition: background 0.3s;
-}
-
-.hyvor-talk-button:hover {
-  background: #0d47a1 !important; /* biru tua saat hover */
-}
-
-/* Garis pemisah antar komentar */
-.hyvor-talk-comment {
-  border-bottom: 1px solid
 
 
 
