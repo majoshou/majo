@@ -1361,6 +1361,20 @@
 }
 
 
+/* Warna teks komentar Hyvor Talk */
+.hyvor-talk-comment,
+.hyvor-talk-comment p,
+.hyvor-talk-comment-body,
+.hyvor-talk-comment-text {
+  color: #ffffff !important;
+}
+
+.hyvor-talk-comment-author {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+
 
 
 
