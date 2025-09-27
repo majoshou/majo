@@ -1361,6 +1361,17 @@
 }
 
 
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto; /* biar bisa scroll ke bawah */
+  overflow-x: hidden; /* supaya tidak geser samping */
+}
+
+
+body {
+  padding-top: 70px; /* sesuaikan tinggi header */
+}
 
 
 

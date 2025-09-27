@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YumeSubs</title>
+    <link href="majo.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0f26;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      gap: 30px;
+    }
+
+    .poster {
+      flex: 1;
+      max-width: 280px;
+    }
+
+    .poster img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .details {
+      flex: 3;
+    }
+
+    .details h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    .alt-title {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 15px;
+    }
+
+    .description {
+      margin-bottom: 20px;
+      font-size: 15px;
+      color: #e2e8f0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 30px;
+      font-size: 14px;
+    }
+
+    .info-grid div {
+      margin-bottom: 8px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #93c5fd;
+    }
+
+    .value {
+      color: #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Header -->
+    <header class="header" id="header">
+        <a href="index.html" class="logo-container">
+            <div class="logo">
+                <img src="images/icon.png" width="50" height="50">>
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(-15 17.5 50)" />
+                    <rect x="35" y="15" width="15" height="70" fill="url(#grad1)" />
+                    <rect x="60" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(15 67.5 50)" />
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
+                </svg>
+            </div>
+            <div class="logo-text">YumeSubs</div>
+        </a>
+
+
+        <nav class="main-menu" id="mainMenu">
+            <a href="index.html" class="menu-item active">Home</a>
+            <a href="yume.html" class="menu-item">Komentar</a>
+            <a href="terjemah.html" class="menu-item">Terjemah</a>
+             <a href="manga.html" class="menu-item">Poi</a>
+            <a href="https://www.youtube.com/@YumeSubtitle" target="_blank" rel="noopener noreferrer" class="menu-item external">Youtube</a>
+        </nav>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+
+  <div class="container">
+    <!-- Poster -->
+    <div class="poster">
+      <img src="images/1.jpg" alt="Mizu Zokusei no Mahoutsukai">
+    </div>
+
+    <!-- Detail Anime -->
+    <div class="details">
+      <h1>YumeSubs</h1>
+      <div class="alt-title">
+        Disini hanya ada kumpulan link dan sedikit informasi
+      </div>
+
+      <div class="description">
+      Website ini dibuat agar mudah menyimpan hasil terjemahan lagu jepang. (sebenernya gabut si:v)
+        <br><br>
+        Komen aja kalo mau di tambahin:v
+      </div>
+
+      <div class="info-grid">
+        <div><span class="label">Hanime:</span> <span class="value"><a href="hentaicop.com" target="_blank" rel="noopener noreferrer" class="menu-item external">HentaiCop</a></a></span></div>
+        <div><span class="label">Hanime:</span> <span class="value"><a href="nekopoi.care" target="_blank" rel="noopener noreferrer" class="menu-item external">Nekopoi</a></a></span></div>
+        <div><span class="label">Hanime:</span> <span class="value"><a href="hanime.tv/home" target="_blank" rel="noopener noreferrer" class="menu-item external">Hanime</a></a></span></div>
+        <div><span class="label">Hanime:</span> <span class="value"><a href="animeidhentai.com" target="_blank" rel="noopener noreferrer" class="menu-item external">AnimeIdHentai</a></a></span></div>
+        <div><span class="label">Hanime:</span> <span class="value"><a href="hentai.tv" target="_blank" rel="noopener noreferrer" class="menu-item external">Hentai.tv</a></a></span></div>
+        <div><span class="label">Hanime:</span> <span class="value"><a href="hentaiworld.tv" target="_blank" rel="noopener noreferrer" class="menu-item external">Hentai World</a></a></span></div>
+
+      </div>
+       </div>
+    </div>
+
+
+
+  <link href="majo.css" rel="stylesheet">
+</body>
+</html>
