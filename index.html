@@ -12,15 +12,10 @@
       font-family: Arial, sans-serif;
       background: #000000;
       text-align: justify;
-
-
-
- /* Cegah block teks */
+  /* Cegah block teks & long press copy */
       user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-
-      /* Cegah long press menu di mobile */
       -webkit-touch-callout: none;
     }
 
@@ -39,16 +34,11 @@
       display: inline-block;
 
       /* Tombol & link tetap bisa normal */
-      user-select: auto; 
-      pointer-events: auto;
+      user-select: auto;
       -webkit-user-select: auto;
       -webkit-touch-callout: default;
+      pointer-events: auto;
     }
-
-
-
-
-
 
 </style>
 
@@ -137,7 +127,7 @@
     </div>
 
 
-<script>
+ <script>
     // Disable klik kanan (context menu) kecuali tombol & link
     document.addEventListener("contextmenu", function(e) {
       if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
@@ -152,6 +142,13 @@
       }
     }, { passive: false });
 
+    
+    // Disable klik kanan (desktop) kecuali tombol & link
+    document.addEventListener("contextmenu", function(e) {
+      if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
+        e.preventDefault();
+      }
+    });
 
   </script>
 
