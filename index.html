@@ -6,6 +6,53 @@
     <title>YumeSubs - Translate</title>
     <link href="majo.css" rel="stylesheet">
 
+<style>
+
+ body {
+      font-family: Arial, sans-serif;
+      background: #000000;
+      text-align: justify;
+
+
+
+ /* Cegah block teks */
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+
+      /* Cegah long press menu di mobile */
+      -webkit-touch-callout: none;
+    }
+
+    img {
+      pointer-events: none; /* cegah drag gambar */
+    }
+
+    button, a {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+
+      /* Tombol & link tetap bisa normal */
+      user-select: auto; 
+      pointer-events: auto;
+      -webkit-user-select: auto;
+      -webkit-touch-callout: default;
+    }
+
+
+
+
+
+
+</style>
+
+
 
 </head>
 <body>
@@ -88,6 +135,30 @@
     <div class="scroll-to-top" id="scrollToTop">
         <span>↑</span>
     </div>
+
+
+<script>
+    // Disable klik kanan (context menu) kecuali tombol & link
+    document.addEventListener("contextmenu", function(e) {
+      if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
+        e.preventDefault();
+      }
+    });
+
+    // Disable long press di mobile (Android/iOS)
+    document.addEventListener("touchstart", function(e) {
+      if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    // Optional: cegah dragstart di semua elemen kecuali tombol & link
+    document.addEventListener("dragstart", function(e) {
+      if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
+        e.preventDefault();
+      }
+    });
+  </script>
 
 <script src="majoshou.js"></script>
 
