@@ -91,8 +91,81 @@
       background: #1c1c1c;
   </style>
 
+  <script>
+function searchAnime() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.querySelectorAll(".anime-card .anime-title");
+
+  let found = false;
+  cards.forEach(card => {
+    const title = card.textContent.toLowerCase();
+
+    // reset efek lama
+    card.parentElement.classList.remove("found");
+
+    if (title.includes(input)) {
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      // kasih efek animasi
+      card.parentElement.classList.add("found");
+      setTimeout(() => {
+        card.parentElement.classList.remove("found");
+      }, 2000);
+
+      found = true;
+    }
+  });
+
+  if (!found && input.trim() !== "") {
+    alert("Judul tidak ditemukan!");
+  }
+}
+
+function showNotification(message) {
+  const container = document.getElementById("notification");
+  const notif = document.createElement("div");
+  notif.className = "notification";
+  notif.textContent = message;
+
+  container.appendChild(notif);
+
+  // otomatis hilang setelah 4 detik
+  setTimeout(() => {
+    notif.remove();
+  }, 4000);
+}
+
+function searchAnime() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.querySelectorAll(".anime-card .anime-title");
+
+  let found = false;
+  cards.forEach(card => {
+    const title = card.textContent.toLowerCase();
+    card.parentElement.classList.remove("found");
+
+    if (title.includes(input)) {
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+      card.parentElement.classList.add("found");
+      setTimeout(() => {
+        card.parentElement.classList.remove("found");
+      }, 2000);
+      found = true;
+    }
+  });
+
+  if (!found && input.trim() !== "") {
+    showNotification("❌ Judul tidak ditemukan!");
+  }
+}
+</script>
+
+
+  
+
 
 </head>
+
 <body>
     <!-- Header -->
     <header class="header" id="header">
@@ -144,6 +217,14 @@
                 <p>Satu satu ya, ribet soalnya:)</p>
             </div>
  
+
+  <div class="search-box">
+  <input type="text" id="searchInput" placeholder="Cari judul...">
+  <button onclick="searchAnime()">
+    🔍 Cari
+  </button>
+</div>
+
 
             
      <div class="anime-grid">
@@ -201,8 +282,7 @@
     </div>
 
 <script src="majoshou.js"></script>
-
+<div id="notification"></div>
 </body>
-
 
 </html>

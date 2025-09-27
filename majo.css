@@ -1270,7 +1270,95 @@
                 border-radius: 25px;
             }
         }
+.search-box {
+  text-align: center;
+  margin: 15px;
+}
 
+.search-box input {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  width: 220px;
+  font-size: 14px;
+}
+
+.search-box button {
+  padding: 10px 16px;
+  margin-left: 8px;
+  background: linear-gradient(135deg, #2563eb, #9333ea); /* biru → ungu */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* ✨ Efek highlight hasil pencarian */
+@keyframes glow {
+  0%   { box-shadow: 0 0 0px #e91e63; transform: scale(1); }
+  50%  { box-shadow: 0 0 20px #e91e63; transform: scale(1.03); }
+  100% { box-shadow: 0 0 0px #e91e63; transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}
+
+.found {
+  animation: glow 1s ease-in-out infinite, shake 0.5s ease-in-out;
+  border-radius: 12px;
+}
+
+/* Container posisi tetap */
+#notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Style notifikasi */
+.notification {
+  background: linear-gradient(135deg, #f43f5e, #e11d48); /* merah gradien */
+  color: white;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideIn 0.5s forwards, fadeOut 0.5s 3s forwards;
+}
+
+/* Animasi masuk */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animasi keluar */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
 
 
 
