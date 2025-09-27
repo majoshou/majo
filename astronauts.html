@@ -471,13 +471,6 @@
       }
     });
 
-    // Disable long press di mobile (Android/iOS)
-    document.addEventListener("touchstart", function(e) {
-      if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
-        e.preventDefault();
-      }
-    }, { passive: false });
-
     // Optional: cegah dragstart di semua elemen kecuali tombol & link
     document.addEventListener("dragstart", function(e) {
       if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
