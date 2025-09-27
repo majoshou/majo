@@ -1373,6 +1373,71 @@ body {
   padding-top: 70px; /* sesuaikan tinggi header */
 }
 
+/* Tombol toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Menu default */
+.main-menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* Responsif: menu tersembunyi di HP */
+@media (max-width: 768px) {
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .main-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Animasi hamburger jadi silang */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Tombol toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;           /* jarak antar garis */
+  width: 22px;        /* lebar tombol */
+  height: 18px;       /* tinggi tombol */
+}
+
 
 
 

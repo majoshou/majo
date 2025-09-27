@@ -155,7 +155,7 @@
   <div class="container">
     <!-- Poster -->
     <div class="poster">
-      <img src="images/1.jpg" alt="Mizu Zokusei no Mahoutsukai">
+      <img src="images/1.jpg "Zokusei no Mahoutsukai">
     </div>
 
     <!-- Detail Anime -->
@@ -202,6 +202,15 @@
     });
 
   </script>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mainMenu = document.getElementById("mainMenu");
+
+  menuToggle.addEventListener("click", () => {
+    mainMenu.classList.toggle("active");
+    menuToggle.classList.toggle("open");
+  });
+</script>
 
   <link href="majo.css" rel="stylesheet">
 </body>
