@@ -9,72 +9,86 @@
 
 
       <style>
-    body {
+   body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #111;
       color: #fff;
     }
+
     header {
       background: #1c1c1c;
-      padding: 30px;
+      padding: 15px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
       font-size: 20px;
       color: #fff;
     }
-    .anime-grid {
+
+      .anime-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-      padding: 20px;
+      grid-template-columns: repeat(2, 1fr); /* Default HP = 2 kolom */
+      gap: 15px;
+      padding: 15px;
     }
+
+    /* Kalau layar lebar (>= 1024px) ubah jadi 4 kolom */
+    @media (min-width: 1024px) {
+      .anime-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
     .anime-card {
       position: relative;
       overflow: hidden;
-      border-radius: 6px;
+      border-radius: 8px;
       background: #222;
-      cursor: pointer;
-      transition: transform 0.3s;
       text-decoration: none;
       color: inherit;
+      transition: transform 0.3s;
     }
+
     .anime-card:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
+
     .anime-card img {
-       width: 100%;
-      height: 220px;      /* tinggi gambar dikurangi */
-      object-fit: cover;  /* supaya tidak melar */
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
       display: block;
     }
+
     .episode-tag {
       position: absolute;
-      top: 8px;
-      left: 8px;
+      top: 6px;
+      left: 6px;
       background: #e91e63;
-      padding: 3px 6px;
-      font-size: 12px;
+      padding: 2px 5px;
+      font-size: 11px;
       border-radius: 3px;
     }
+
     .day-tag {
       position: absolute;
-      top: 8px;
-      right: 8px;
+      top: 6px;
+      right: 6px;
       background: #2196f3;
-      padding: 3px 6px;
-      font-size: 12px;
+      padding: 2px 5px;
+      font-size: 11px;
       border-radius: 3px;
     }
+
     .anime-title {
-      padding: 10px;
-      font-size: 14px;
+      padding: 6px;
+      font-size: 13px;
       font-weight: bold;
       text-align: center;
       background: #1c1c1c;
-    }
   </style>
 
 
@@ -140,11 +154,11 @@
       <div class="anime-title">Ring Ding - Aimyon</div>
     </a>
 
-    <a href="anime-details.html" class="anime-card">
-      <img src="https://picsum.photos/id/1016/300/400" alt="Anime">
-      <div class="episode-tag">Ep 12</div>
-      <div class="day-tag">Jumat</div>
-      <div class="anime-title">Mizu Zokusei no</div>
+    <a href="astronauts.html" class="anime-card">
+      <img src="images/astronauts.jpg" alt="Anime">
+      <div class="episode-tag">Vocaloid</div>
+      <div class="day-tag">2011</div>
+      <div class="anime-title">Astronauts - Hatsune Miku</div>
     </a>
 
     <a href="anime-details.html" class="anime-card">
@@ -189,4 +203,5 @@
 <script src="majoshou.js"></script>
 
 </body>
+
 </html>
