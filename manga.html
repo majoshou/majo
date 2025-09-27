@@ -73,9 +73,46 @@
     .value {
       color: #f1f5f9;
     }
+
+    
+    body {
+      background:var(--bg);
+      color:var(--text);
+      font-family: Inter, system-ui, "Helvetica Neue", Arial;
+      margin:0;
+      line-height:1.45;
+         /* Cegah block teks & long press copy */
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    img {
+      pointer-events: none; /* cegah drag gambar */
+    }
+
+    button, a {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+
+      /* Tombol & link tetap bisa normal */
+      user-select: auto;
+      -webkit-user-select: auto;
+      -webkit-touch-callout: default;
+      pointer-events: auto;
+    }
+
   </style>
 </head>
 <body>
+
     <!-- Header -->
     <header class="header" id="header">
         <a href="index.html" class="logo-container">
@@ -115,11 +152,10 @@
     <!-- Home Section -->
 
 
-
   <div class="container">
     <!-- Poster -->
     <div class="poster">
-      <img src="images/1.jpg" alt="Poi">
+      <img src="images/1.jpg" alt="Mizu Zokusei no Mahoutsukai">
     </div>
 
     <!-- Detail Anime -->
@@ -149,8 +185,24 @@
 
 
 
+
+ <script>
+    // Disable klik kanan (context menu) kecuali tombol & link
+    document.addEventListener("contextmenu", function(e) {
+      if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
+        e.preventDefault();
+      }
+    });
+
+    // Disable klik kanan (desktop) kecuali tombol & link
+    document.addEventListener("contextmenu", function(e) {
+      if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
+        e.preventDefault();
+      }
+    });
+
+  </script>
+
   <link href="majo.css" rel="stylesheet">
 </body>
 </html>
-
-
