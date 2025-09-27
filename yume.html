@@ -6,48 +6,64 @@
     <title>YumeSubs - Hubungi</title>
 <link href="majo.css" rel="stylesheet">
 
-	<style>
-/* Ubah warna background dan teks Hyvor Talk */
+<style>
+/* ===== Hyvor Talk Dark Theme Custom ===== */
+
+/* Latar belakang utama komentar */
 hyvor-talk-comments, 
 .hyvor-talk-comments,
 .hyvor-talk-widget,
 .hyvor-talk-body {
-  background-color: #f7f8fa !important; /* latar belakang terang */
-  color: #0b1220 !important;            /* teks gelap */
+  background-color: #0f172a !important; /* hitam kebiruan gelap */
+  color: #f1f5f9 !important;           /* teks terang */
 }
 
-/* komentar individual */
+/* Kotak tiap komentar */
 .hyvor-talk-comment {
-  background: #ffffff !important;
-  color: #0b1220 !important;
+  background: #1e293b !important;      /* abu gelap */
+  color: #f1f5f9 !important;
   border-radius: 10px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #334155;
   padding: 10px;
 }
 
-/* input komentar */
+/* Nama user lebih terang & tebal */
+.hyvor-talk-comment-author,
+.hyvor-talk-comment .author,
+.hyvor-talk-user-name {
+  color: #ffffff !important;   /* putih terang */
+  font-weight: 700 !important;
+}
+
+/* Isi teks komentar */
+.hyvor-talk-comment-body {
+  color: #e2e8f0 !important;   /* abu muda */
+}
+
+/* Input komentar */
 .hyvor-talk-input, 
 .hyvor-talk-textarea {
-  background: #ffffff !important;
-  color: #0b1220 !important;
-  border: 1px solid #d1d5db !important;
+  background: #0f172a !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
   border-radius: 8px !important;
 }
 
-/* placeholder agar terlihat */
+/* Placeholder input */
 .hyvor-talk-input::placeholder,
 .hyvor-talk-textarea::placeholder {
-  color: #6b7280 !important;
+  color: #94a3b8 !important;   /* abu keperakan */
 }
 
-/* tombol */
+/* Tombol kirim */
 .hyvor-talk-button {
-  background: #2563eb !important;
+  background: #2563eb !important;  /* biru terang */
   color: #ffffff !important;
   border-radius: 8px !important;
   font-weight: 600;
 }
 </style>
+
 
 
 	
@@ -168,3 +184,4 @@ Pesan:<br>
 </body>
 
 </html>
+
